@@ -1,26 +1,105 @@
-ul {
-  list-style-type: none;
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  bottom: 0;
+html, body{
+  height: 100%;
   width: 100%;
-  overflow: hidden;
-  background-color: #333;
+  margin: 0;
 }
 
-li a {
-  float: left;
+body{
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #6c7b95;
 }
 
-li a, button {
-  display: block;
-  color: white;
+#mapid {
+  height: 50%;
+  width: 50%;
+}
+
+#background-top{
+  height: 100%;
+  background-image: url("trees2.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#top{
+  padding: 0;
+  margin-top: 0;
+  color: #c7f0db;
+  font-size: 40px;
   text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#facts, #about{
+  color: #c7f0db;
+  font-size: 20px;
+}
+
+.nav_bar{
+  font-family: "Raleway", sans-serif;
+  opacity: 0.75;
+  background: #464159;
+  background-blend-mode: luminosity;
+  line-height: 1.8;
+  text-align: left;
   padding: 14px 16px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.nav_button{
+  color: #c7f0db;
+  font-size: 30px;
+  display: inline-block;
+  padding: 2px 10px;
+  text-align: center;
   text-decoration: none;
 }
 
-li a:hover, button:hover {
-  background-color: #111;
+a:hover, button:hover {
+  background-color: #8bbabb;
+  color: azure;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("trees.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
 }
