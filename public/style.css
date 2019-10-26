@@ -2,7 +2,7 @@ html, body{
   padding: 0;
   margin: 0;
   background-color: #6c7b95;
-  background-image: url("trees.jpg");
+  background-image: url("trees2.jpg");
   background-size: 100%;
   font-family: "Raleway", sans-serif;
   background-position: center;
@@ -14,7 +14,15 @@ header {
   font-size: 60px;
 }
 
-#top, #map, #facts, #about{
+#top{
+  color: #c7f0db;
+  font-size: 40px;
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#map, #facts, #about{
   color: #c7f0db;
   font-size: 20px;
 }
