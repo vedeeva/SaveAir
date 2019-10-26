@@ -2,79 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title> Save Air </title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title> Save Air </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <p>Save Air</p>
-    </header>
-    <div class="nav_bar">
-        <a class="nav_button" href="top" >Home</a>
-        <a class="nav_button" href="map" >Map</a>
-        <a class="nav_button" href="facts" >Facts</a>
-        <a class="nav_button" href="about" >About Us</a>
-        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        </a> 
-      </div>
-    <div id="top">
-    <p id="message"><strong>“The ultimate test of man’s conscience may be his willingness to sacrifice something today for future generations whose words of thanks will not be heard.”
-            —Gaylord Nelson </strong></p>
-    </div>
-    
-    <div id="map">
-
+    <div id="background-top">
+        <div id="top">
+            <p id="message"><strong>“The ultimate test of man’s conscience may be his willingness to sacrifice something
+                    today for future generations whose words of thanks will not be heard.” —Gaylord Nelson </strong></p>
+        </div>
     </div>
     
     <div id="facts">
         <h2 id="Facts">Facts About Air</h2>
         <p> We need air to breath.</p>
-    </div>
-    
+    </div <!-- Creates the Map API object -->
+    <div id="mapid"></div>
+    <script>
+        const mymap = L.map('mapid').setView([30, -35], 2.25);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
+        }).addTo(mymap);
+    </script>
+
     <div id="about">
 
-            <h2 id="About">About Us</h2>
-            <p> We are people.</p>
-          
-          <h3 id="Donald"> Donald </h3>
-            <p> He is a man. Things.</p>
-          
-          <h3 id="Victoria"> Victoria </h3>
-            <p> She. Stan LOONA.</p>
-          
-          <h3 id="Vincente"> Vincente</h3>
-            <p> King. Food 4 Less.</p>
-          
-          <h3 id="Kevin"> Kevin</h3>
-            <p> Hehe. My body ache. </p>
-          
+        <h2 id="About">About Us</h2>
+        <p> We are people.</p>
+
+        <h3 id="Donald"> Donald </h3>
+        <p> He is a man. Things.</p>
+
+        <h3 id="Victoria"> Victoria </h3>
+        <p> She. Stan LOONA.</p>
+
+        <h3 id="Vincente"> Vincente</h3>
+        <p> King. Food 4 Less.</p>
+
+        <h3 id="Kevin"> Kevin</h3>
+        <p> Hehe. My body ache. </p>
+
+    </div>
+    <div class="nav_bar">
+        <a class="nav_button" href="#top">Home</a>
+        <a class="nav_button" href="#map">Map</a>
+        <a class="nav_button" href="#facts">Facts</a>
+        <a class="nav_button" href="#about">About Us</a>
+        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        </a>
     </div>
 </body>
-<!--
- 
- 
- 
-  
-    <a href="/getData"> View All Flavors </a>
-    <h1> Ice Cream Wish List </h1>
-    <form action="/insertData" method="POST">
-    <p>Ice Cream to Add</p>
-     <input type="text" name="flavor"/>
-            <input type="submit" value="insert"/>
-        </form>
 
-        <form action="/count" method="GET">
-            <p>Ice Cream to Find How Many Exist in our Database</p>
-            <input type="text" name="flavor" />
-            <input type="submit" value="search" />
-        </form>
-
-        <form action="/randomFlavor" method="GET">
-            <p>Grabbing a random flavor</p>
-            <input type="submit" value="randomFlavor"/>
-        </form>
--->
 </html>

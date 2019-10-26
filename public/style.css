@@ -1,20 +1,32 @@
 html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body{
+  font-family: "Raleway", sans-serif;
   padding: 0;
   margin: 0;
   background-color: #6c7b95;
+}
+
+#mapid {
+  height: 50%;
+  width: 50%;
+}
+
+#background-top{
+  height: 100%;
   background-image: url("trees2.jpg");
   background-size: 100%;
-  font-family: "Raleway", sans-serif;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-header {
-  color: #c7f0db;
-  font-size: 60px;
-}
-
 #top{
+  padding: 0;
+  margin-top: 0;
   color: #c7f0db;
   font-size: 40px;
   text-align: center;
@@ -22,7 +34,7 @@ header {
   margin-right: 300px;
 }
 
-#map, #facts, #about{
+#facts, #about{
   color: #c7f0db;
   font-size: 20px;
 }
@@ -91,5 +103,3 @@ a:hover, button:hover {
     min-height: 400px;
   }
 }
-
-

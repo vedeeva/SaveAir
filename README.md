@@ -2,37 +2,29 @@
 
 
 # Getting Started 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 ## Installing
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+To get started, please clone this repository:
 ```
-Give the example
+git clone https://github.com/vedeeva/SaveAir.git
 ```
-
-And repeat
-
+To run this website locally, please use node to run the server.js:
 ```
-until finished
+node server.js
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+This will print "Server listening on Port 3001". Go onto your preferred web browser, and type "localhost:3001" to view the web page.
 
 ## Deployment
 Add additional notes about how to deploy this on a live system
 
 ## Built With
-- [Node.js] (https://nodejs.org/en/)
-- [Express] (https://expressjs.com/)
-- [Firebase] (https://console.firebase.google.com/u/0/)
-- [Mapbox] (https://www.mapbox.com/)
-- [Leaflet] (https://leafletjs.com/index.html)
-- [WAQI] (https://aqicn.org/api/)
-
-
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Firebase](https://console.firebase.google.com/u/0/)
+- [Mapbox](https://www.mapbox.com/)
+- [Leaflet](https://leafletjs.com/index.html)
+- [WAQI](https://aqicn.org/api/)
 
 # Authors:
 - Kevin Dong (kevindong545)
