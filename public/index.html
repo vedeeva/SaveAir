@@ -4,8 +4,116 @@
 <head>
   <meta charset="UTF-8">
   <title> Save Air </title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #6c7b95;
+      background-image: url("trees.jpg");
+      background-size: 100%;
+      font-family: "Raleway", sans-serif;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    html, body, #mapid {
+      height: 97.9%;
+      width: 100%;
+    }
+
+    header {
+      color: #c7f0db;
+      font-size: 60px;
+    }
+
+    #top,
+    #map,
+    #facts,
+    #about {
+      color: #c7f0db;
+      font-size: 20px;
+    }
+
+    .nav_bar {
+      font-family: "Raleway", sans-serif;
+      opacity: 0.75;
+      background: #464159;
+      background-blend-mode: luminosity;
+      line-height: 1.8;
+      text-align: left;
+      padding: 14px 16px;
+      text-decoration: none;
+      position: fixed;
+      bottom: 0;
+      border-radius: 2px;
+      width: 100%;
+    }
+
+    .nav_button {
+      color: #c7f0db;
+      font-size: 30px;
+      display: inline-block;
+      padding: 2px 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a:hover,
+    button:hover {
+      background-color: #8bbabb;
+      color: azure;
+      border-radius: 2px;
+      opacity: 0.9;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url("trees.jpg");
+      min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("/w3images/parallax2.jpg");
+      min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("/w3images/parallax3.jpg");
+      min-height: 400px;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,34 +136,48 @@
 
     </div>
 
-    <div id="facts">
-      <h2 id="Facts">Dangers of Bad Air</h2>
-        <p>We breathe everyday. That means billions of air particles course through
-        our lungs daily. If that is the case, then what happens when that air becomes
-        polluted?</p>
-        <h4>The AQI </h4>
-        <p>The AQI, or Air Quality Index, is an indicator of cleaniness in the air.
-        The higher the index, the worse the air quality. It ranges from 0 to 500.</p>
-      <table border="4" cellpadding="2" cellspacing="2" width="100%">
-        <tr>
-          <td id="good">0-50</td> <td>Good</td>
-        </tr>
-        <tr>
-          <td id="moderate">51-100</td> <td>Moderate</td>
-        </tr>
-        <tr>
-          <td id="sensitive">101-150</td><td>Unhealthy for Sensitive Groups</td>
-        </tr>
-        <tr>
-          <td id="unhealthy">151-200 <td>Unhealthy</td>
-        </tr>
-        <tr>
-          <td id="v.unhealthy">201-300</td><td>Very Unhealthy </td>
-        </tr>
-        <tr>
-          <td id="harzard">301-500</td><td>Harzardous</td>
-        </tr>
-      </table>
+    <h2 id="Facts">Dangers of Bad Air</h2>
+      <p>We breathe everyday. That means billions of air particles course through
+      our lungs daily. If that is the case, then what happens when that air becomes
+      polluted?</p>
+      <h4>The AQI </h4>
+      <p>The AQI, or Air Quality Index, is an indicator of cleaniness in the air.
+      The higher the index, the worse the air quality. It ranges from 0 to 500.</p>
+    <table border="4" cellpadding="2" cellspacing="2" width="100%">
+      <tr>
+        <td id="good">0-50</td> <td>Good</td>
+      </tr>
+      <tr>
+        <td id="moderate">51-100</td> <td>Moderate</td>
+      </tr>
+      <tr>
+        <td id="sensitive">101-150</td><td>Unhealthy for Sensitive Groups</td>
+      </tr>
+      <tr>
+        <td id="unhealthy">151-200 <td>Unhealthy</td>
+      </tr>
+      <tr>
+        <td id="v.unhealthy">201-300</td><td>Very Unhealthy </td>
+      </tr>
+      <tr>
+        <td id="harzard">301-500</td><td>Harzardous</td>
+      </tr>
+    </table>
+
+    <h4> Who's at Risk?</h4>
+      <ul>
+        <li>Children</li>
+          <p> They are young so their respiratory system is not
+          as developed as those of adults. They also tend to be more
+          active and outdoor-sy than adults and thus tend to inhale
+          more air. </p>
+        <li>The Elderly</li>
+          <p> The elderly who possess ilnesses such as heart or lung cancer
+          will not survive long in these harsh conditions. </p>
+        <li>The Sickly</li>
+          <p> They are already so the bad air will make them even more sick
+          or cause conditions to flare up</p>
+      </ul>
     </div>
 
     <div id="about">
