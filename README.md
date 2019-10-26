@@ -19,14 +19,12 @@ This will print "Server listening on Port 3001". Go onto your preferred web brow
 Add additional notes about how to deploy this on a live system
 
 ## Built With
-- [Node.js] (https://nodejs.org/en/)
-- [Express] (https://expressjs.com/)
-- [Mapbox] (https://www.mapbox.com/)
-- [Leaflet] (https://leafletjs.com/index.html)
-- [Leaflet-Heatmap] (https://www.patrick-wied.at/static/heatmapjs/plugin-leaflet-layer.html)
-- [WAQI] (https://aqicn.org/api/)
-
-
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Firebase](https://console.firebase.google.com/u/0/)
+- [Mapbox](https://www.mapbox.com/)
+- [Leaflet](https://leafletjs.com/index.html)
+- [WAQI](https://aqicn.org/api/)
 
 # Authors:
 - Kevin Dong (kevindong545)
