@@ -128,59 +128,55 @@
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <p>Save Air</p>
-  </header>
-  <div class="nav_bar">
-    <a class="nav_button" href="top">Home</a>
-    <a class="nav_button" href="map">Map</a>
-    <a class="nav_button" href="facts">Facts</a>
-    <a class="nav_button" href="about">About Us</a>
-    <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-    </a>
-  </div>
-  <div id="top">
-    <p id="message"> We need to stop.</p>
-  </div>
+    <div id="background-top">
+        <div id="top">
+            <p id="message"><strong>“The ultimate test of man’s conscience may be his willingness to sacrifice something
+                    today for future generations whose words of thanks will not be heard.” —Gaylord Nelson </strong></p>
+        </div>
+    </div>
+    
+    <div id="facts">
+        <h2 id="Facts">Facts About Air</h2>
+        <p> We need air to breath.</p>
+    </div <!-- Creates the Map API object -->
+    <div id="mapid"></div>
+    <script>
+        const mymap = L.map('mapid').setView([30, -35], 2.25);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
+        }).addTo(mymap);
+    </script>
 
-  <!-- Creates the Map API object -->
-  <div id="mapid"></div>
-  <script>
-    const mymap = L.map('mapid').setView([30, -35], 2.25);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox.streets',
-      accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
-    }).addTo(mymap);
-  </script>
+    <div id="about">
 
-  <div id="facts">
-    <h2 id="Facts">Facts About Air</h2>
-    <p> We need air to breath.</p>
-  </div>
+        <h2 id="About">About Us</h2>
+        <p> We are people.</p>
 
-  <div id="about">
+        <h3 id="Donald"> Donald </h3>
+        <p> He is a man. Things.</p>
 
-    <h2 id="About">About Us</h2>
-    <p> We are people.</p>
+        <h3 id="Victoria"> Victoria </h3>
+        <p> She. Stan LOONA.</p>
 
-    <h3 id="Donald"> Donald </h3>
-    <p> He is a man. Things.</p>
+        <h3 id="Vincente"> Vincente</h3>
+        <p> King. Food 4 Less.</p>
 
-    <h3 id="Victoria"> Victoria </h3>
-    <p> She. Stan LOONA.</p>
+        <h3 id="Kevin"> Kevin</h3>
+        <p> Hehe. My body ache. </p>
 
-    <h3 id="Vincente"> Vincente</h3>
-    <p> King. Food 4 Less.</p>
-
-    <h3 id="Kevin"> Kevin</h3>
-    <p> Hehe. My body ache. </p>
-
-  </div>
-
+    </div>
+    <div class="nav_bar">
+        <a class="nav_button" href="#top">Home</a>
+        <a class="nav_button" href="#map">Map</a>
+        <a class="nav_button" href="#facts">Facts</a>
+        <a class="nav_button" href="#about">About Us</a>
+        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        </a>
+    </div>
 </body>
 
 </html>
