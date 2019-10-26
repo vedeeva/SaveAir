@@ -10,53 +10,27 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-
-    html,
-    body,
-    #mapid {
-      height: 97.9%;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    ul {
-      list-style-type: none;
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      bottom: 0;
-      width: 100%;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-    li a {
-      float: left;
-    }
-
-    li a,
-    button {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover,
-    button:hover {
-      background-color: #111;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Creates the Map API object -->
+    <header>
+        <p>Save Air</p>
+    </header>
+    <div class="nav_bar">
+        <a class="nav_button" href="top" >Home</a>
+        <a class="nav_button" href="map" >Map</a>
+        <a class="nav_button" href="facts" >Facts</a>
+        <a class="nav_button" href="about" >About Us</a>
+        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        </a> 
+      </div>
+    <div id="top">
+    <p id="message"> We need to stop.</p>
+    </div>
+    
+<!-- Creates the Map API object -->
   <div id="mapid"></div>
   <script>
     const mymap = L.map('mapid').setView([30, -35], 2.25);
@@ -67,13 +41,30 @@
       accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
     }).addTo(mymap);
   </script>
+    
+    <div id="facts">
+        <h2 id="Facts">Facts About Air</h2>
+        <p> We need air to breath.</p>
+    </div>
+    
+    <div id="about">
 
-  <!-- Creates the NavBar -->
-  <ul>
-    <li><a class="active" href="/">Home</a></li>
-    <li><a href="/About">About</a></li>
-    <li><a href="https://github.com/vedeeva/SaveAir" target="_blank">Github</a></li>
-  </ul>
+            <h2 id="About">About Us</h2>
+            <p> We are people.</p>
+          
+          <h3 id="Donald"> Donald </h3>
+            <p> He is a man. Things.</p>
+          
+          <h3 id="Victoria"> Victoria </h3>
+            <p> She. Stan LOONA.</p>
+          
+          <h3 id="Vincente"> Vincente</h3>
+            <p> King. Food 4 Less.</p>
+          
+          <h3 id="Kevin"> Kevin</h3>
+            <p> Hehe. My body ache. </p>
+      
+  </div>
+  
 </body>
-
 </html>
