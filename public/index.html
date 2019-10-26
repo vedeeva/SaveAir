@@ -12,25 +12,127 @@
     crossorigin=""></script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #6c7b95;
+      background-image: url("trees.jpg");
+      background-size: 100%;
+      font-family: "Raleway", sans-serif;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    html, body, #mapid {
+      height: 97.9%;
+      width: 100%;
+    }
+
+    header {
+      color: #c7f0db;
+      font-size: 60px;
+    }
+
+    #top,
+    #map,
+    #facts,
+    #about {
+      color: #c7f0db;
+      font-size: 20px;
+    }
+
+    .nav_bar {
+      font-family: "Raleway", sans-serif;
+      opacity: 0.75;
+      background: #464159;
+      background-blend-mode: luminosity;
+      line-height: 1.8;
+      text-align: left;
+      padding: 14px 16px;
+      text-decoration: none;
+      position: fixed;
+      bottom: 0;
+      border-radius: 2px;
+      width: 100%;
+    }
+
+    .nav_button {
+      color: #c7f0db;
+      font-size: 30px;
+      display: inline-block;
+      padding: 2px 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a:hover,
+    button:hover {
+      background-color: #8bbabb;
+      color: azure;
+      border-radius: 2px;
+      opacity: 0.9;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url("trees.jpg");
+      min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("/w3images/parallax2.jpg");
+      min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("/w3images/parallax3.jpg");
+      min-height: 400px;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <p>Save Air</p>
-    </header>
-    <div class="nav_bar">
-        <a class="nav_button" href="top" >Home</a>
-        <a class="nav_button" href="map" >Map</a>
-        <a class="nav_button" href="facts" >Facts</a>
-        <a class="nav_button" href="about" >About Us</a>
-        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        </a> 
-      </div>
-    <div id="top">
+  <header>
+    <p>Save Air</p>
+  </header>
+  <div class="nav_bar">
+    <a class="nav_button" href="top">Home</a>
+    <a class="nav_button" href="map">Map</a>
+    <a class="nav_button" href="facts">Facts</a>
+    <a class="nav_button" href="about">About Us</a>
+    <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    </a>
+  </div>
+  <div id="top">
     <p id="message"> We need to stop.</p>
-    </div>
-    
-<!-- Creates the Map API object -->
+  </div>
+
+  <!-- Creates the Map API object -->
   <div id="mapid"></div>
   <script>
     const mymap = L.map('mapid').setView([30, -35], 2.25);
@@ -41,30 +143,31 @@
       accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
     }).addTo(mymap);
   </script>
-    
-    <div id="facts">
-        <h2 id="Facts">Facts About Air</h2>
-        <p> We need air to breath.</p>
-    </div>
-    
-    <div id="about">
 
-            <h2 id="About">About Us</h2>
-            <p> We are people.</p>
-          
-          <h3 id="Donald"> Donald </h3>
-            <p> He is a man. Things.</p>
-          
-          <h3 id="Victoria"> Victoria </h3>
-            <p> She. Stan LOONA.</p>
-          
-          <h3 id="Vincente"> Vincente</h3>
-            <p> King. Food 4 Less.</p>
-          
-          <h3 id="Kevin"> Kevin</h3>
-            <p> Hehe. My body ache. </p>
-      
+  <div id="facts">
+    <h2 id="Facts">Facts About Air</h2>
+    <p> We need air to breath.</p>
   </div>
-  
+
+  <div id="about">
+
+    <h2 id="About">About Us</h2>
+    <p> We are people.</p>
+
+    <h3 id="Donald"> Donald </h3>
+    <p> He is a man. Things.</p>
+
+    <h3 id="Victoria"> Victoria </h3>
+    <p> She. Stan LOONA.</p>
+
+    <h3 id="Vincente"> Vincente</h3>
+    <p> King. Food 4 Less.</p>
+
+    <h3 id="Kevin"> Kevin</h3>
+    <p> Hehe. My body ache. </p>
+
+  </div>
+
 </body>
+
 </html>
