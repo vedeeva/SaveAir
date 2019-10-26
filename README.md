@@ -37,7 +37,7 @@ Add additional notes about how to deploy this on a live system
 # Authors:
 - Kevin Dong (kevindong545)
 - Victoria Edeeva (vedeeva)
-- Vincente Montoya (looneyvincente)
+- Vicente Montoya (looneyvicente)
 - Donald Wolfson (dwolfson486)
 
 ## License
