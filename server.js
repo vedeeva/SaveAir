@@ -3,6 +3,7 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
+const fetch = require('node-fetch');
 
 // Server will always find an open port.
 const port = process.env.PORT || 3001;
@@ -29,14 +30,16 @@ app.post('/insertData', (req, res) => {
 });
 
 function getCities() {
-    fetch('https://api.openaq.org/v1/latest').then( response => {
-        return response.json();
-    }).then(data => {
-        var length = Object.keys(data).length;
-        console.log(length);
-    })
+  fetch('https://api.openaq.org/v1/latest?has_geo').then( response => {
+      return response.json();
+  }).then(data => {
+      var length = Object.keys(data.results).length;
+      console.log(length);
+  })
 }
+
 getCities();
+
 // Gets Air Quality Data
  /*  app.get('/', async (req, res) => {
         
