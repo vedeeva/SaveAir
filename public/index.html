@@ -53,22 +53,35 @@
       padding: 14px 16px;
       text-decoration: none;
       position: fixed;
+      
+    ul {
+      list-style-type: none;
+      position: absolute;
+      margin: 0;
+      padding: 0;
       bottom: 0;
       border-radius: 2px;
       width: 100%;
     }
 
-    .nav_button {
+     .nav_button {
       color: #c7f0db;
       font-size: 30px;
       display: inline-block;
       padding: 2px 10px;
+    li a {
+      float: left;
+    }
+
+    li a,
+    button {
+      display: block;
+      color: white;
       text-align: center;
       text-decoration: none;
     }
 
-    a:hover,
-    button:hover {
+    a:hover, li a:hover, button:hover {
       background-color: #8bbabb;
       color: azure;
       border-radius: 2px;
