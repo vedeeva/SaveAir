@@ -20,11 +20,15 @@ app.get('/', (req, res) => {
 });
 
 function getCities() {
-  fetch('https://api.openaq.org/v1/latest?has_geo').then(response => {
-    return response.json();
-  }).then(data => {
-    var length = Object.keys(data.results).length;
-  })
+    fetch('https://api.openaq.org/v1/latest?has_geo').then( response => {
+        return response.json();
+    }).then(data => {
+            //console.log(data.results);
+        for(var i = 0; i < Object.keys(data.results).length; i++){
+            var lon = data.results[i].coordinates.longtitude;
+            var lat = data.results[i].coordinates.latitude;
+            const aq_url = `https://api.openaq.org/v1/latest?coordinates=${lat},${lon}`; 
+        }     
+    })
 }
-
 getCities();

@@ -15,16 +15,72 @@
 </head>
 
 <body>
+    <header>
+        <p>Save Air</p>
+    </header>
+    <div class="nav_bar">
+        <a class="nav_button" href="top">Home</a>
+        <a class="nav_button" href="map">Map</a>
+        <a class="nav_button" href="facts">Facts</a>
+        <a class="nav_button" href="about">About Us</a>
+        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        </a>
+    </div>
     <div id="background-top">
     </div>
     <div id="top">
         <p id="message"><strong>“The ultimate test of man’s conscience may be his willingness to sacrifice something
                 today for future generations whose words of thanks will not be heard.” —Gaylord Nelson </strong></p>
     </div>
+    <h2 id="Facts">Dangers of Bad Air</h2>
+    <p>We breathe everyday. That means billions of air particles course through
+        our lungs daily. If that is the case, then what happens when that air becomes
+        polluted?</p>
+    <h4>The AQI </h4>
+    <p>The AQI, or Air Quality Index, is an indicator of cleaniness in the air.
+        The higher the index, the worse the air quality. It ranges from 0 to 500.</p>
+    <table border="4" cellpadding="2" cellspacing="2" width="100%">
+        <tr>
+            <td id="good">0-50</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td id="moderate">51-100</td>
+            <td>Moderate</td>
+        </tr>
+        <tr>
+            <td id="sensitive">101-150</td>
+            <td>Unhealthy for Sensitive Groups</td>
+        </tr>
+        <tr>
+            <td id="unhealthy">151-200
+            <td>Unhealthy</td>
+        </tr>
+        <tr>
+            <td id="v.unhealthy">201-300</td>
+            <td>Very Unhealthy </td>
+        </tr>
+        <tr>
+            <td id="harzard">301-500</td>
+            <td>Harzardous</td>
+        </tr>
+    </table>
 
-    <div id="facts">
-        <h2 id="Facts">Facts About Air</h2>
-        <p> We need air to breath.</p>
+    <h4> Who's at Risk?</h4>
+    <ul>
+        <li>Children</li>
+        <p> They are young so their respiratory system is not
+            as developed as those of adults. They also tend to be more
+            active and outdoor-sy than adults and thus tend to inhale
+            more air. </p>
+        <li>The Elderly</li>
+        <p> The elderly who possess ilnesses such as heart or lung cancer
+            will not survive long in these harsh conditions. </p>
+        <li>The Sickly</li>
+        <p> They are already so the bad air will make them even more sick
+            or cause conditions to flare up</p>
+    </ul>
+    </div>
     </div <!-- Creates the Map API object -->
     <div id="mapid"></div>
     <script>
@@ -55,14 +111,30 @@
         <p> Hehe. My body ache. </p>
 
     </div>
-    <div class="nav_bar">
-        <a class="nav_button" href="#top">Home</a>
-        <a class="nav_button" href="#map">Map</a>
-        <a class="nav_button" href="#facts">Facts</a>
-        <a class="nav_button" href="#about">About Us</a>
-        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        </a>
-    </div>
 </body>
+<!--
+
+
+
+
+    <a href="/getData"> View All Flavors </a>
+    <h1> Ice Cream Wish List </h1>
+    <form action="/insertData" method="POST">
+    <p>Ice Cream to Add</p>
+     <input type="text" name="flavor"/>
+            <input type="submit" value="insert"/>
+        </form>
+
+        <form action="/count" method="GET">
+            <p>Ice Cream to Find How Many Exist in our Database</p>
+            <input type="text" name="flavor" />
+            <input type="submit" value="search" />
+        </form>
+
+        <form action="/randomFlavor" method="GET">
+            <p>Grabbing a random flavor</p>
+            <input type="submit" value="randomFlavor"/>
+        </form>
+-->
 
 </html>
