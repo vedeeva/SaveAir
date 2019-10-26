@@ -1,5 +1,6 @@
 # SDHacks2019
 
+
 # Getting Started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
   
@@ -21,14 +22,10 @@ until finished
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Deployment
-
 Add additional notes about how to deploy this on a live system
 
 ## Built With
-
-* [Example API](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Example API](https://maven.apache.org/) - Dependency Management
-* [EXample Extension](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Add any / all API's and Extensions used.
 
 # Authors:
 - Kevin Dong
@@ -37,11 +34,9 @@ Add additional notes about how to deploy this on a live system
 - Donald Wolfson (dwolfson486)
 
 ## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+When done, add a license, most likely MIT.
 
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- [Amazon AWS](aws.amazon.com/awscredits): For the $100 Credit.
+- [Google Cloud](hackp.ac/learncloud): For the $100 Credit.
+- [Domain.com](hackp.ac/domains): For the free domain.
