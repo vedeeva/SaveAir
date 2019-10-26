@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Save Air </title>
-        <link type="text/css" rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Save Air </title>
+  <style>
+    ul {
+      list-style-type: none;
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      bottom: 0;
+      width: 100%;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li a {
+      float: left;
+    }
+
+    li a, button {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover, button:hover {
+      background-color: #111;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="/About">About</a></li>
+    <li><a href="https://github.com/vedeeva/SaveAir" target="_blank">Github</a></li>
+  </ul>
+</body>
+<!--<body>
         <a href="/getData"> View All Flavors </a>
         <h1> Ice Cream Wish List </h1>
         <form action="/insertData" method="POST">
@@ -24,5 +60,6 @@
             <p>Grabbing a random flavor</p>
             <input type="submit" value="randomFlavor"/>
         </form>
-    </body>
+    </body>-->
+
 </html>
