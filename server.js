@@ -28,9 +28,25 @@ app.post('/insertData', (req, res) => {
     res.redirect('/');
 });
 
-// Gets all the ice creams in the array
-app.get('/getData', (req, res) => {
-    res.send(iceCreams.toString());
+function getCities() {
+    fetch('https://api.openaq.org/v1/latest').then( response => {
+        return response.json();
+    }).then(data => {
+        var length = Object.keys(data).length;
+        console.log(length);
+    })
+}
+getCities();
+// Gets Air Quality Data
+ /*  app.get('/', async (req, res) => {
+        
+        const aq_url = `https://api.openaq.org/v1/latest?coordinates=${lat},${lon}`;
+        const aq_response = await fetch(aq_url);
+        const aq_data = await aq_response.json();
+        const data = {
+            air_quality: aq_data
+          };
+          response.json(data);
 });
 
 // TODO: Write a GET request to /count that checks iterates through 
@@ -45,4 +61,4 @@ app.get('/getData', (req, res) => {
 function getRandomNumber() {
     const num = Math.floor(Math.random() * iceCreams.length);
     return num;
-}
+} */

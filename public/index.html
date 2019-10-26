@@ -1,13 +1,31 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title> Save Air </title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
   <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    html,
+    body,
+    #mapid {
+      height: 97.9%;
+      width: 100%;
+      overflow: hidden;
+    }
     ul {
       list-style-type: none;
-      position: fixed;
+      position: absolute;
       margin: 0;
       padding: 0;
       bottom: 0;
@@ -15,26 +33,38 @@
       overflow: hidden;
       background-color: #333;
     }
-
     li a {
       float: left;
     }
-
-    li a, button {
+    li a,
+    button {
       display: block;
       color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
     }
-
-    li a:hover, button:hover {
+    li a:hover,
+    button:hover {
       background-color: #111;
     }
   </style>
 </head>
 
 <body>
+  <!-- Creates the Map API object -->
+  <div id="mapid"></div>
+  <script>
+    const mymap = L.map('mapid').setView([30, -35], 2.25);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox.streets',
+      accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
+    }).addTo(mymap);
+  </script>
+
+  <!-- Creates the NavBar -->
   <ul>
     <li><a class="active" href="/">Home</a></li>
     <li><a href="/About">About</a></li>
@@ -49,13 +79,11 @@
             <input type="text" name="flavor"/>
             <input type="submit" value="insert"/>
         </form>
-
         <form action="/count" method="GET">
             <p>Ice Cream to Find How Many Exist in our Database</p>
             <input type="text" name="flavor" />
             <input type="submit" value="search" />
         </form>
-
         <form action="/randomFlavor" method="GET">
             <p>Grabbing a random flavor</p>
             <input type="submit" value="randomFlavor"/>
