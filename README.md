@@ -36,7 +36,7 @@ Add any / all API's and Extensions used.
 # Authors:
 - Kevin Dong (kevindong545)
 - Victoria Edeeva (vedeeva)
-- Vincente Montoya (looneyvincente)
+- Vicente Montoya (looneyvicente)
 - Donald Wolfson (dwolfson486)
 
 ## License
