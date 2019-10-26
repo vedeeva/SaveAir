@@ -4,49 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <title> Save Air </title>
-  <style>
-    ul {
-      list-style-type: none;
-      position: fixed;
-      margin: 0;
-      padding: 0;
-      bottom: 0;
-      width: 100%;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-    li a {
-      float: left;
-    }
-
-    li a, button {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover, button:hover {
-      background-color: #111;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <ul>
-    <li><a class="active" href="/">Home</a></li>
-    <li><a href="/About">About</a></li>
-    <li><a href="https://github.com/vedeeva/SaveAir" target="_blank">Github</a></li>
-  </ul>
+    <div class="nav_bar">
+      <a class="nav_button" href="#home" >Home</a>
+      <a class="nav_button" href="#map" >Map</a>
+      <a class="nav_button" href="#facts" >Facts</a>
+      <a class="nav_button" href="#about" >About Us</a>
+      <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      </a> 
+    </div>
+  
+<a href="https://github.com/vedeeva/SaveAir" target="_blank"> <img src="github.png"> </a></li>
 </body>
-<!--<body>
-        <a href="/getData"> View All Flavors </a>
-        <h1> Ice Cream Wish List </h1>
-        <form action="/insertData" method="POST">
-            <p>Ice Cream to Add</p>
-            <input type="text" name="flavor"/>
+<!--
+  <a href="/getData"> View All Flavors </a>
+    <h1> Ice Cream Wish List </h1>
+    <form action="/insertData" method="POST">
+    <p>Ice Cream to Add</p>
+     <input type="text" name="flavor"/>
             <input type="submit" value="insert"/>
         </form>
 
@@ -60,6 +39,6 @@
             <p>Grabbing a random flavor</p>
             <input type="submit" value="randomFlavor"/>
         </form>
-    </body>-->
-
-</html>
+--> 
+   
+</html> 
