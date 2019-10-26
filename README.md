@@ -3,7 +3,13 @@
 
 # Getting Started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-  
+
+
+## Extensions Used
+- Node.js
+- Express
+- FireBase  
+
 ## Installing
 A step by step series of examples that tell you how to get a development env running
 
@@ -28,7 +34,7 @@ Add additional notes about how to deploy this on a live system
 Add any / all API's and Extensions used.
 
 # Authors:
-- Kevin Dong
+- Kevin Dong (kevindong545)
 - Victoria Edeeva (vedeeva)
 - Vincente Montoya (looneyvincente)
 - Donald Wolfson (dwolfson486)
