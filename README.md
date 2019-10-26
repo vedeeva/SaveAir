@@ -25,12 +25,12 @@ End with an example of getting some data out of the system or using it for a lit
 Add additional notes about how to deploy this on a live system
 
 ## Built With
-- [Node.js] (https://nodejs.org/en/)
-- [Express] (https://expressjs.com/)
-- [Firebase] (https://console.firebase.google.com/u/0/)
-- [Mapbox] (https://www.mapbox.com/)
-- [Leaflet] (https://leafletjs.com/index.html)
-- [WAQI] (https://aqicn.org/api/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [Firebase](https://console.firebase.google.com/u/0/)
+- [Mapbox](https://www.mapbox.com/)
+- [Leaflet](https://leafletjs.com/index.html)
+- [WAQI](https://aqicn.org/api/)
 
 
 
