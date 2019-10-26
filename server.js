@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
-
 function getCities() {
   fetch('https://api.openaq.org/v1/latest?has_geo').then(response => {
     return response.json();
