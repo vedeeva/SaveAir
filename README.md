@@ -1,5 +1,6 @@
 # SaveAir
 
+To access our website, please [click here](http://18.191.117.19:3001/index.html#top). 
 
 # Installing
 To get started, please clone this repository, and download all of its dependencies:
