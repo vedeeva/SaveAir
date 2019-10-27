@@ -11,19 +11,17 @@ body{
   border: 0;
   outline: 0;
   background-color: #6c7b95;
-}
-
-#mapid {
-  height: 50%;
-  width: 50%;
-}
-
-#background-top{
   height: 100%;
   background-image: url("../media/trees2.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#mapid {
+  height: 50%;
+  width: 50%;
+  background: black;
 }
 
 #top{
