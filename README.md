@@ -1,5 +1,5 @@
 # SaveAir
-SD Hacks 2019 project
+SD Hacks 2019 project.
 Do you know how contaminated is the air you breath everyday?
 Check out our website's map to find out!
 
