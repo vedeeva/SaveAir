@@ -1,4 +1,4 @@
-html, body{
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -19,10 +19,8 @@ html, body{
   }
 
   #mapid {
-    height: 80%;
-    width: 90%;
-    margin-left: 100px;
-    margin-top: 50px;
+    height: 90%;
+    width: 100%;
   }
   
   .nav_bar{
