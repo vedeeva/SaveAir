@@ -26,7 +26,7 @@ body{
 
 #top{
   padding: 0;
-  margin-top: 200px;
+  margin-top: 450px;
   color: #c7f0db;
   font-size: 40px;
   text-align: center;
@@ -37,6 +37,7 @@ body{
 #facts, #about{
   color: #c7f0db;
   font-size: 20px;
+  margin-top: 500px;
 }
 
 .nav_bar{
