@@ -1,4 +1,7 @@
 # SaveAir
+SD Hacks 2019 project
+Do you know how contaminated is the air you breath everyday?
+Check out our website's map to find out!
 
 To access our website, please [click here](http://18.191.117.19:3001/index.html#top). 
 
