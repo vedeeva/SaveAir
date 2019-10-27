@@ -46,6 +46,9 @@
           var length = Object.keys(data.results).length;
           var cityData = [];
           for (var i = 0; i < length; i++) {
+            if (data.results[i].coordinates.latitude == 0 && data.results[i].coordinates.longitude == 0) {
+              continue;
+            }
             var city = {
               lat: data.results[i].coordinates.latitude,
               lng: data.results[i].coordinates.longitude,
@@ -70,7 +73,7 @@
             // radius should be small ONLY if scaleRadius is true (or small radius is intended)
             // if scaleRadius is false it will be the constant radius used in pixels
             "radius": 2,
-            "maxOpacity": .5,
+            "maxOpacity": .2,
             // scales the radius based on map zoom
             "scaleRadius": true,
             // if set to false the heatmap uses the global maximum for colorization
