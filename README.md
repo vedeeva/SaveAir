@@ -8,10 +8,12 @@
 To get started, please clone this repository:
 ```
 git clone https://github.com/vedeeva/SaveAir.git
+cd SaveAir
+npm install
 ```
 To run this website locally, please use node to run the server.js:
 ```
-node server.js
+nodemon server.js
 ```
 This will print "Server listening on Port 3001". Go onto your preferred web browser, and type "localhost:3001" to view the web page.
 
