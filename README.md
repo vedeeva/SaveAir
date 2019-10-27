@@ -2,13 +2,14 @@
 SD Hacks 2019 project\
 Do you know how contaminated the air you breath is?\
 Check out our website's map to find out!\
-Our project was to raise awareness of global air quality, direct your to great recources on how to help keep the world clean, and visualize an espect of the world's air quality.
+Our project was to raise awareness of global air quality, direct your to great recources on how to help keep the world clean, and visualize an aspect of the world's air quality.
 
 Here's a look at what our map looks like:
 ![Image](https://github.com/vedeeva/SaveAir/blob/master/public/media/Screen%20Shot%202019-10-27%20at%208.31.18%20AM.png)
 
 To access our website, please [click here](http://18.191.117.19:3001/index.html#top). 
 
+The website was deployed using AWS's EC2 instances.
 
 # Installing
 To get started, please clone this repository, and download all of its dependencies:
@@ -21,7 +22,11 @@ To run this website locally, please use node to run the server.js:
 ```
 nodemon server.js
 ```
-The termina will output the line bellow:
+OR
+```
+node server.js
+```
+The terminal will output the line bellow:
 ```
 Server listening on port 3001
 ```
@@ -45,4 +50,4 @@ If you would like to have the public site updated with your work, please contact
 - Donald Wolfson (dwolfson486)
 
 ## License
-When done, add a license, most likely MIT.
+MIT License.
