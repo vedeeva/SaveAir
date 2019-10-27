@@ -2,163 +2,165 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title> Save Air </title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-        crossorigin=""></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title> Save Air </title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-    <div class="nav_bar">
-        <a class="nav_button" href="#top">Home</a>
-        <a class="nav_button" href="#facts">Did you know that?</a>
-        <a class="nav_button" href="#problem">Why is it a problem?</a>
-        <a class="nav_button" href="map.html">Map</a>
-        <a class="nav_button" href="#action">What you can do about it?</a>
-        <a class="nav_button" href="#mission">Our Mission</a>
-        <a class="nav_button" href="#about">About Us</a>
-        <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        </a>
-    </div>
+  <div class="nav_bar">
+    <a class="nav_button" href="#top">Home</a>
+    <a class="nav_button" href="#facts">Did you know that?</a>
+    <a class="nav_button" href="#problem">Why is it a problem?</a>
+    <a class="nav_button" href="map.html">Map</a>
+    <a class="nav_button" href="#action">What you can do about it?</a>
+    <a class="nav_button" href="#mission">Our Mission</a>
+    <a class="nav_button" href="#about">About Us</a>
+    <a href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    </a>
+  </div>
 
-    <div id="top">
-        <header> <strong>#SaveTheAir</strong> </header>
-        <table border="0" cellpadding="2" width="100%">
-            <tr>
-                <td>
-                    <p id="message1"><strong>“The ultimate test of man’s conscience may be his willingness to sacrifice
-                            something
-                            today for future generations whose words of thanks will not be heard.” -Gaylord Nelson
-                        </strong></p>
-                </td>
-                <td>
-                    <p id="message2"><strong>"Climate change is the environmental challenge of this generation, and it
-                            is imperative that we act before it's too late." -John Delaney
-                        </strong></p>
-                </td>
-                <td>
-                    <p id="message3"><strong>"Climate change is a terrible problem, and it absolutely needs to be
-                            solved. It deserves to be a huge priority." -Bill Gates
-                        </strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p id="message4"><strong>“The Earth is what we all have in common.” -Wendell Berry
-                        </strong></p>
-                </td>
-                <td>
-                    <p id="message5"><strong>“Never doubt that a small group of thoughtful, committed citizens can
-                            change the world; indeed, it is the only thing that ever has.”
-                            -Margaret Mead
-                        </strong></p>
-                </td>
-                <td>
-                    <p id="message6"><strong>“A nation that destroys its soils destroys itself. Forests are the lungs of
-                            our land, purifying the air and giving fresh strength to our people.”
-                            -Franklin D. Roosevelt
-                        </strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p id="message7"><strong>“The Earth is a fine place and worth fighting for.”
-                            -Ernest Hemingway
-                        </strong></p>
-                </td>
-                <td>
-                    <p id="message8"><strong>“We have forgotten how to be good guests, how to walk lightly on the earth
-                            as its other creatures do." -Barbara Ward
-                        </strong></p>
-                </td>
-                <td>
-                    <p id="message9"><strong>"Destroying rainforest for economic gain is like burning a Renaissance
-                            painting to cook a meal." -E. O. Wilson
-                        </strong></p>
-                </td>
-            </tr>
-        </table>
-    </div>
+  <div id="top">
+    <header> <strong>#SaveTheAir</strong> </header>
+    <table border="0" cellpadding="2" width="100%">
+      <tr>
+        <td>
+          <p id="message1"><strong>“The ultimate test of man’s conscience may be his willingness to sacrifice
+              something
+              today for future generations whose words of thanks will not be heard.” -Gaylord Nelson
+            </strong></p>
+        </td>
+        <td>
+          <p id="message2"><strong>"Climate change is the environmental challenge of this generation, and it
+              is imperative that we act before it's too late." -John Delaney
+            </strong></p>
+        </td>
+        <td>
+          <p id="message3"><strong>"Climate change is a terrible problem, and it absolutely needs to be
+              solved. It deserves to be a huge priority." -Bill Gates
+            </strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id="message4"><strong>“The Earth is what we all have in common.” -Wendell Berry
+            </strong></p>
+        </td>
+        <td>
+          <p id="message5"><strong>“Never doubt that a small group of thoughtful, committed citizens can
+              change the world; indeed, it is the only thing that ever has.”
+              -Margaret Mead
+            </strong></p>
+        </td>
+        <td>
+          <p id="message6"><strong>“A nation that destroys its soils destroys itself. Forests are the lungs of
+              our land, purifying the air and giving fresh strength to our people.”
+              -Franklin D. Roosevelt
+            </strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id="message7"><strong>“The Earth is a fine place and worth fighting for.”
+              -Ernest Hemingway
+            </strong></p>
+        </td>
+        <td>
+          <p id="message8"><strong>“We have forgotten how to be good guests, how to walk lightly on the earth
+              as its other creatures do." -Barbara Ward
+            </strong></p>
+        </td>
+        <td>
+          <p id="message9"><strong>"Destroying rainforest for economic gain is like burning a Renaissance
+              painting to cook a meal." -E. O. Wilson
+            </strong></p>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-    <div id="facts">
-        <h2>Did you know that?</h2>
-        <ul>
-            <li>An average American breathe 2 gallons of air per minute which means around 3400 gallons of air each day.
-            </li>
-            <li>It has effects as small as burning eyes and itchy throat to as large as breathing problems and death.
-            </li>
-            <li>Producing heavy crude oil increases chances of air pollution by 40% than producing light crude oil.
-            </li>
-            <li>Air pollution in India is estimated to cause 527, 700 deaths every year.
-            </li>
-            <li>Air pollution in China can travel up to Central Valley of California.
-            </li>
-            <li>Air pollution in California kills 25,000 people per year and costs $200 million worth of medical
-                expenses.
-            </li>
-            <li>Air pollution that causes smog affects dolphins and makes them suffer from black lung diseases.
-            </li>
-            <li>A single bus caries passengers which are likely to drive 40 cars.
-            </li>
-            <li>2 million cars in Manila, Philippines cause 80% of air pollution.
-            </li>
-            <br>
-            Source:
-            <a href="https://www.conserve-energy-future.com/various-air-pollution-facts.php" target="_blank"> Conserve
-                Energy Future</a>
+  <div id="facts">
+    <h2>Did you know that?</h2>
+    <ul>
+      <li>An average American breathe 2 gallons of air per minute which means around 3400 gallons of air each day.
+      </li>
+      <li>It has effects as small as burning eyes and itchy throat to as large as breathing problems and death.
+      </li>
+      <li>Producing heavy crude oil increases chances of air pollution by 40% than producing light crude oil.
+      </li>
+      <li>Air pollution in India is estimated to cause 527, 700 deaths every year.
+      </li>
+      <li>Air pollution in China can travel up to Central Valley of California.
+      </li>
+      <li>Air pollution in California kills 25,000 people per year and costs $200 million worth of medical
+        expenses.
+      </li>
+      <li>Air pollution that causes smog affects dolphins and makes them suffer from black lung diseases.
+      </li>
+      <li>A single bus caries passengers which are likely to drive 40 cars.
+      </li>
+      <li>2 million cars in Manila, Philippines cause 80% of air pollution.
+      </li>
+      <br>
+      Source:
+      <a href="https://www.conserve-energy-future.com/various-air-pollution-facts.php" target="_blank"> Conserve
+        Energy Future</a>
 
-        </ul>
-    </div>
-    <div id="problem">
-        <h2>Why air pollution is a problem?</h2>
-         <img src="https://img.huffingtonpost.com/asset/5a6260b31e000028005add90.png?ops=scalefit_720_noupscale&format=webp" alt="Effects of pollution">
-    </div>
+    </ul>
+  </div>
+  <div id="problem">
+    <h2>Why air pollution is a problem?</h2>
+    <img src="https://img.huffingtonpost.com/asset/5a6260b31e000028005add90.png?ops=scalefit_720_noupscale&format=webp"
+      alt="Effects of pollution">
+  </div>
 
-    <div id="action">
-        <h2> What can I do about it?</h2>
-        <ul>
-            <li>The best ways to reduce air pollution are by walking and riding bicycle.
-            </li>
-            <li>Switching to more efficient and cleaner fuels from solid fuels(wood, biomass) can help you to reduce
-                indoor air pollution.
-            </li>
-            <li>Electric vehicles produce less air pollutants. They stir up dirt but without producing gases.
-            </li>
-            <li>Keep car, boat and other engines properly tuned, and avoid engines that smoke.
-            </li>
-            <br>
-            Source:
-            <a href="https://www.conserve-energy-future.com/various-air-pollution-facts.php" target="_blank">Conserve Energy Future</a>
-        
-        </ul>
-    </div>
+  <div id="action">
+    <h2> What can I do about it?</h2>
+    <ul>
+      <li>The best ways to reduce air pollution are by walking and riding bicycle.
+      </li>
+      <li>Switching to more efficient and cleaner fuels from solid fuels(wood, biomass) can help you to reduce
+        indoor air pollution.
+      </li>
+      <li>Electric vehicles produce less air pollutants. They stir up dirt but without producing gases.
+      </li>
+      <li>Keep car, boat and other engines properly tuned, and avoid engines that smoke.
+      </li>
+      <br>
+      Source:
+      <a href="https://www.conserve-energy-future.com/various-air-pollution-facts.php" target="_blank">Conserve Energy
+        Future</a>
 
-            
-        <div id="mission">
-        <h2> Our Mission</h2>
-        <p> To raise awarness about negative impacts of air pollution, help to educate about how to make a change
-        </p>
-        </div>
-        <div id="about">
+    </ul>
+  </div>
 
-            <h2 id="About">About Us</h2>
-            <p> We are a team of UCSD students, who care about environment</p>
+          
+      <div id="mission">
+    <h2> Our Mission</h2>
+    <p> To raise awarness about negative impacts of air pollution, help to educate about how to make a change
+    </p>
+  </div>
+  <div id="about">
 
-            <h3 id="Donald"> Donald </h3>
+    <h2 id="About">About Us</h2>
+    <p> We are a team of UCSD students, who care about environment</p>
 
-            <h3 id="Victoria"> Victoria </h3>
+    <h3 id="Donald"> Donald </h3>
 
-            <h3 id="Vicente"> Vicente</h3>
+    <h3 id="Victoria"> Victoria </h3>
 
-            <h3 id="Kevin"> Kevin</h3>
+    <h3 id="Vicente"> Vicente</h3>
 
-        </div>
+    <h3 id="Kevin"> Kevin</h3>
+
+  </div>
 </body>
 <!--
 

@@ -19,7 +19,7 @@ html, body {
   }
 
   #mapid {
-    height: 90%;
+    height: 92%;
     width: 100%;
   }
   
@@ -33,14 +33,14 @@ html, body {
     padding: 14px 16px;
     text-decoration: none;
     position: fixed;
-    bottom: 0;
+    bottom:  0;
     border-radius: 2px;
     width: 100%;
   }
   
   .nav_button{
     color: #c7f0db;
-    font-size: 30px;
+    font-size: 20px;
     display: inline-block;
     padding: 2px 10px;
     text-align: center;
