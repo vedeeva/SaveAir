@@ -4,13 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title> Save Air </title>
+
+  <!--Generic Leaflet Imports-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
+
+  <!--Leaflet Heatmap Import-->
+  <script src="/plugins/heatmap.js"></script>
+  <script src="/plugins/leaflet-heatmap.js"></script>
+
+  <!--Font import-->
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!--Stylesheet import-->
   <link rel="stylesheet" type="text/css" href="css/style-map.css" />
 </head>
 
@@ -30,73 +40,84 @@
   <!-- Creates the Map API object -->
   <div id="mapid"></div>
   <script>
-    // Get's the data from openAQ
-    function getCities() {
-      fetch('https://api.openaq.org/v1/latest?parameter=co&has_geo').then(response => {
-        return response.json();
-      }).then(data => {
-        var finalData = []
-        var length = Object.keys(data.results).length;
-        finalData.push({ "max": length });
-        var cityData = [];
-        for (var i = 0; i < length; i++) {
-          var city = {
-            "lat": data.results[i].coordinates.latitude,
-            "lng": data.results[i].coordinates.longitude,
-            "count": data.results[i].measurements[0].value,
+    window.onload = function () {
+      getCities = function () {
+        fetch('https://api.openaq.org/v1/latest?parameter=co&has_geo&limit=999').then(response => {
+          return response.json();
+        }).then(data => {
+          var length = Object.keys(data.results).length;
+          var cityData = [];
+          for (var i = 0; i < length; i++) {
+            if (data.results[i].coordinates.latitude == 0 && data.results[i].coordinates.longitude == 0) {
+              continue;
+            }
+            var city = {
+              lat: data.results[i].coordinates.latitude,
+              lng: data.results[i].coordinates.longitude,
+              count: data.results[i].measurements[0].value,
+            }
+            cityData.push(city);
           }
-          cityData.push(city);
-        }
-        finalData.push({ "data": cityData });
-        return finalData;
-      }).catch(err => {
-        console.log(err.error);
-      });
-    }
+          var finalData = {
+            max: length,
+            data: cityData,
+          }
 
-    var baseLayer = L.tileLayer(
-      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '...',
-      maxZoom: 18
-    }
-    );
+          console.log(finalData);
 
-    var cfg = {
-      // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-      // if scaleRadius is false it will be the constant radius used in pixels
-      "radius": 2,
-      "maxOpacity": .8,
-      // scales the radius based on map zoom
-      "scaleRadius": true,
-      // if set to false the heatmap uses the global maximum for colorization
-      // if activated: uses the data maximum within the current map boundaries
-      //   (there will always be a red spot with useLocalExtremas true)
-      "useLocalExtrema": true,
-      // which field name in your data represents the latitude - default "lat"
-      latField: 'lat',
-      // which field name in your data represents the longitude - default "lng"
-      lngField: 'lng',
-      // which field name in your data represents the data value - default "value"
-      valueField: 'count'
+          // Adds generic Layer to the map
+          var baseLayer = L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18
+          });
+
+          var cfg = {
+            // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+            // if scaleRadius is false it will be the constant radius used in pixels
+            "radius": 2,
+            "maxOpacity": .2,
+            // scales the radius based on map zoom
+            "scaleRadius": true,
+            // if set to false the heatmap uses the global maximum for colorization
+            // if activated: uses the data maximum within the current map boundaries
+            //   (there will always be a red spot with useLocalExtremas true)
+            "useLocalExtrema": true,
+            // which field name in your data represents the latitude - default "lat"
+            latField: 'lat',
+            // which field name in your data represents the longitude - default "lng"
+            lngField: 'lng',
+            // which field name in your data represents the data value - default "value"
+            valueField: 'count'
+          };
+
+          // Sets up a heatmapOverlay based on cfg.
+          var heatmapLayer = new HeatmapOverlay(cfg);
+
+          // Updates heatmapLayer with the data from openAQ
+          heatmapLayer.setData(finalData);
+
+          //const map = L.map('mapid').setView([30, -35], 2.25);
+          const map = new L.Map('mapid', {
+            center: new L.LatLng(30, -35),
+            zoom: 2.25,
+            layers: [baseLayer, heatmapLayer]
+          });
+          // Add the tiles to the map.
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: process.env.API_KEY
+          }).addTo(map);
+
+
+        }).catch(err => {
+          console.log(err.error);
+          console.log(err.message);
+        });
+      }
+      getCities();
     };
-
-    var heatmapLayer = new HeatmapOverlay(cfg);
-
-    var map = new L.Map('map-canvas', {
-      center: new L.LatLng(25.6586, -80.3568),
-      zoom: 4,
-      layers: [baseLayer, heatmapLayer]
-    });
-
-    heatmapLayer.setData(testData);
-    /*// Visualizes the map
-    const mymap = L.map('mapid').setView([30, -35], 2.25);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox.streets',
-      accessToken: 'pk.eyJ1IjoiZG9uYWxkd29sZnNvbiIsImEiOiJjazI3c3JycnowNmM2M25ueWgzOWhtb2FnIn0.4-QQr3UnmddoJcU4_VrFYg'
-    }).addTo(mymap);*/
   </script>
 </body>
 
