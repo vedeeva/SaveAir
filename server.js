@@ -9,7 +9,7 @@ const fetch = require('node-fetch');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Needed to use External Stylesheet with NodeJS and Express
-app.use(express.static(__dirname +'/public'));
+app.use(express.static(__dirname + '/public'));
 
 // Default endpoint 
 app.get('/', (req, res) => {
@@ -21,17 +21,3 @@ const port = process.env.PORT || 3001;
 server.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`);
 });
-
-function getCities() {
-    fetch('https://api.openaq.org/v1/latest?has_geo').then( response => {
-        return response.json();
-    }).then(data => {
-            //console.log(data.results);
-        for(var i = 0; i < Object.keys(data.results).length; i++){
-            var lon = data.results[i].coordinates.longtitude;
-            var lat = data.results[i].coordinates.latitude;
-            const aq_url = `https://api.openaq.org/v1/latest?coordinates=${lat},${lon}`; 
-        }     
-    })
-}
-getCities();
