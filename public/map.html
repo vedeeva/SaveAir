@@ -10,6 +10,7 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
+  <script src="../node_modules/leaflet-heatmap/leaflet-heatmap.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style-map.css" />
 </head>
@@ -27,15 +28,18 @@
   <!-- Creates the Map API object -->
   <div id="mapid"></div>
   <script>
+
     // Get's the data from openAQ
     function getCities() {
       fetch('https://api.openaq.org/v1/latest?parameter=co&has_geo').then(response => {
         return response.json();
       }).then(data => {
+
         var finalData = []
         var length = Object.keys(data.results).length;
         finalData.push({ "max": length });
         var cityData = [];
+
         for (var i = 0; i < length; i++) {
           var city = {
             "lat": data.results[i].coordinates.latitude,
@@ -44,6 +48,7 @@
           }
           cityData.push(city);
         }
+
         finalData.push({ "data": cityData });
         return finalData;
       }).catch(err => {
@@ -51,7 +56,24 @@
       });
     }
 
-    var baseLayer = L.tileLayer(
+    // Sets up the generic map.
+    var map = L.map('mapid').setView([30, -35], 2.25);
+    // Adds tiles to the map
+    var tiles = L.tileLayer(
+      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18
+    }).addTo(map);
+
+    /*
+    addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+    var heat = L.heatLayer(addressPoints).addTo(map);
+    */
+
+    // Stores to openAQ data in testData
+    //var testData = [];
+    //testData = getCities();
+
+    /*var baseLayer = L.tileLayer(
       'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '...',
       maxZoom: 18
@@ -79,15 +101,15 @@
 
     var heatmapLayer = new HeatmapOverlay(cfg);
 
-    var map = new L.Map('map-canvas', {
+    var map = new L.Map('mapid', {
       center: new L.LatLng(25.6586, -80.3568),
       zoom: 4,
       layers: [baseLayer, heatmapLayer]
     });
 
-    heatmapLayer.setData(testData);
-    /*// Visualizes the map
-    const mymap = L.map('mapid').setView([30, -35], 2.25);
+    heatmapLayer.setData(testData);*/
+    // Visualizes the map
+    /*const mymap = L.map('mapid').setView([30, -35], 2.25);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
