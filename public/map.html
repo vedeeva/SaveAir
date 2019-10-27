@@ -40,7 +40,7 @@
   <script>
     window.onload = function () {
       getCities = function () {
-        fetch('https://api.openaq.org/v1/latest?parameter=co&has_geo').then(response => {
+        fetch('https://api.openaq.org/v1/latest?parameter=co&has_geo&limit=999').then(response => {
           return response.json();
         }).then(data => {
           var length = Object.keys(data.results).length;
