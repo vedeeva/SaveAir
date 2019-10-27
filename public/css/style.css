@@ -11,7 +11,6 @@ body{
   border: 0;
   outline: 0;
   background-color: #6c7b95;
-
 }
 
 #mapid {
@@ -21,7 +20,7 @@ body{
 
 #background-top{
   height: 100%;
-  background-image: url("trees2.jpg");
+  background-image: url("../media/trees2.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +82,7 @@ a:hover, button:hover {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("trees.jpg");
+  background-image: url("../media/trees.jpg");
   min-height: 100%;
 }
 
