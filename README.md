@@ -2,7 +2,7 @@
 SD Hacks 2019 project\
 Do you know how contaminated the air you breath is?\
 Check out our website's map to find out!\
-Our project was to raise awareness of global air quality, direct your to great recources on how to help keep the world clean, and visualize an aspect of the world's air quality.
+Our project was to raise awareness of global air quality, direct you to great resources on how to help keep the world clean, and visualize an aspect of the world's air quality.
 
 Here's a look at what our map looks like:
 ![Image](https://github.com/vedeeva/SaveAir/blob/master/public/media/Screen%20Shot%202019-10-27%20at%208.31.18%20AM.png)
