@@ -70,7 +70,7 @@
             // radius should be small ONLY if scaleRadius is true (or small radius is intended)
             // if scaleRadius is false it will be the constant radius used in pixels
             "radius": 2,
-            "maxOpacity": .8,
+            "maxOpacity": .5,
             // scales the radius based on map zoom
             "scaleRadius": true,
             // if set to false the heatmap uses the global maximum for colorization
@@ -90,8 +90,6 @@
 
           // Updates heatmapLayer with the data from openAQ
           heatmapLayer.setData(finalData);
-
-          // Visualizes the map
 
           //const map = L.map('mapid').setView([30, -35], 2.25);
           const map = new L.Map('mapid', {
