@@ -11,14 +11,6 @@ body{
   border: 0;
   outline: 0;
   background-color: #6c7b95;
-}
-
-#mapid {
-  height: 50%;
-  width: 50%;
-}
-
-#background-top{
   height: 100%;
   background-image: url("../media/trees2.jpg");
   background-size: 100%;
@@ -26,9 +18,15 @@ body{
   background-repeat: no-repeat;
 }
 
+#mapid {
+  height: 50%;
+  width: 50%;
+  background: black;
+}
+
 #top{
   padding: 0;
-  margin-top: 200px;
+  margin-top: 450px;
   color: #c7f0db;
   font-size: 40px;
   text-align: center;
@@ -39,6 +37,7 @@ body{
 #facts, #about{
   color: #c7f0db;
   font-size: 20px;
+  margin-top: 500px;
 }
 
 .nav_bar{
