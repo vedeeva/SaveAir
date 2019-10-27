@@ -10,12 +10,19 @@ body{
   margin: 0;
   border: 0;
   outline: 0;
-  background-color: #6c7b95;
+  background-color: #464159;
   height: 100%;
   background-image: url("../media/trees2.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+header{
+  padding: 20px;
+  color: #c7f0db;
+  font-size: 80px;
+  text-align: center;
 }
 
 #mapid {
@@ -26,18 +33,22 @@ body{
 
 #top{
   padding: 0;
-  margin-top: 450px;
   color: #c7f0db;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
-  margin-left: 300px;
-  margin-right: 300px;
 }
 
-#facts, #about{
+#facts, #about, #mission{
   color: #c7f0db;
   font-size: 20px;
+  padding: 100px;
   margin-top: 500px;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #6c7b95;
+}
+
+#message{
 }
 
 .nav_bar{
@@ -95,6 +106,155 @@ a:hover, button:hover {
 .bgimg-3 {
   background-image: url("/w3images/parallax3.jpg");
   min-height: 400px;
+}
+
+#message1 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+}
+
+#message2 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+  opacity: 0;
+  animation-delay: 54s;
+}
+
+#message3 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+opacity: 0;
+  animation-delay: 24s;
+}
+
+#message4 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+  opacity: 0;
+  animation-delay: 40s;
+}
+
+#message5 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+opacity: 0;
+  animation-delay: 62s;
+}
+
+#message6 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+opacity: 0;
+  animation-delay: 48s;
+}
+
+#message7 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+opacity: 0;
+  animation-delay: 16s;
+}
+
+#message8 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+opacity: 0;
+  animation-delay: 32s;
+}
+
+#message9 {
+  -moz-animation: cssAnimation 1s ease-in;
+  /* Firefox */
+  -webkit-animation: cssAnimation 1s ease-in;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 1s ease-in;
+  /* Opera */
+  animation: cssAnimation 1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 8s;
+  animation-delay: 8s;
+}
+
+
+@keyframes cssAnimation {
+
+0%   {opacity: 0;display:none;}
+/* 59 sec : start fading in*/
+20%   {opacity: 0;display:block;}
+/* 60 sec : visible */
+40%   {opacity: 1;display:block;}
+/* 62 sec : start fading out */
+60%   {opacity: 1;display:block;}
+/* 63 sec : not visible */
+80%   {opacity: 0;display:block;}
+/* 64 sec */
+100%   {opacity: 0;display:none;}
 }
 
 /* Turn off parallax scrolling for tablets and phones */
