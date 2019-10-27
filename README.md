@@ -32,8 +32,8 @@ Server listening on port 3001
 ```
 Please open your preferred web-browser and type in: `localhost:3001`
 
-# Deployment
-If you would like to have the public site updated with your work, please contact any of the authors displayed. We'll have to deploy it using AWS on our side.
+# Contributing
+Feel free to contribute to our website. Our goal to continue to add more data, and visualizations. To fully deploy your work, please contact any of the authors displayed below once ready.
 
 # Built With
 - [Node.js](https://nodejs.org/en/)
