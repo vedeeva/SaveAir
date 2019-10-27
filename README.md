@@ -1,5 +1,5 @@
 # SaveAir
-SD Hacks 2019 project\
+SDHack 2019 Project Submission:\
 Do you know how contaminated the air you breath is?\
 Check out our website's map to find out!\
 Our project was to raise awareness of global air quality, direct you to great resources on how to help keep the world clean, and visualize an aspect of the world's air quality.
