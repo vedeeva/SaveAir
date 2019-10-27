@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
 const fetch = require('node-fetch');
+require ('dotenv').config();
 
 // Needed to process body parameters for POST requests
 app.use(bodyParser.urlencoded({ extended: true }));
