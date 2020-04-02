@@ -47,7 +47,7 @@ Feel free to contribute to our website. Our goal to continue to add more data, a
 - Kevin Dong (kevindong545)
 - Victoria Edeeva (vedeeva)
 - Vicente Montoya (looneyvicente)
-- Donald Wolfson (dwolfson486)
+- Donald Wolfson (DonaldWolfson)
 
 ## License
 MIT License.
