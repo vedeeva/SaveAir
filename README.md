@@ -7,7 +7,7 @@ Our project is to raise awareness of global air quality, direct you to great res
 Here's a look at what our map looks like:
 ![Image](https://github.com/vedeeva/SaveAir/blob/master/public/media/Screen%20Shot%202019-10-27%20at%208.31.18%20AM.png)
 
-To access our website, please [click here](http://18.191.117.19:3001/index.html#top). 
+To access our website, please [click here](https://saveair.herokuapp.com/index.html#top). 
 
 The website was deployed using AWS's EC2 instances.
 
